@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "id": "examplemod",
+  "id": "btajamcookies",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This mod aims to help new BTA modders.",
+  "name": "BTA Jam Cookies",
+  "description": "A relatively small mod that adds various new foods. This is my first ever mod for BTA. Special thanks to Useless, Bread, and Martin/Sunsetsatellite for guiding me on how to make one.",
   "authors": [
-    "Turnip Labs"
+    "Silveon22"
   ],
   "contact": {
     "homepage": "",
@@ -19,20 +19,26 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-			"turniplabs.examplemod.ExampleMod"
+			"silveon22.btajamcookies.BTAJamCookies"
     ],
+		"afterItemInit": [
+			"silveon22.btajamcookies.JCItems"
+		],
+		"initModels": [
+			"silveon22.btajamcookies.JCModels"
+		],
 		"beforeGameStart": [
-			"turniplabs.examplemod.ExampleMod"
+			"silveon22.btajamcookies.BTAJamCookies"
 		],
 		"afterGameStart": [
-			"turniplabs.examplemod.ExampleMod"
+			"silveon22.btajamcookies.BTAJamCookies"
 		],
 		"recipesReady": [
-			"turniplabs.examplemod.ExampleMod"
+			"silveon22.btajamcookies.JCRecipes"
 		]
 	},
   "mixins": [
-      "examplemod.mixins.json"
+		"btajamcookies.mixins.json"
   ],
 
   "depends": {
